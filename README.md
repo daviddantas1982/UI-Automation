@@ -24,7 +24,6 @@ Following are the Test Cases written in C# using Slenium Webdriver
   - Verify item has been added to shopping cart
   - Go to Home page
   - Go to shopping cart
-  - 
   
 4. Find item
   - Login as guest
