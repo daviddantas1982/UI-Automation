@@ -28,7 +28,7 @@ public class TestStoreLocator {
     }
 
     @Test
-    public void verifyShopServicesText() {
+    public void verifyStoreLocatorAddress() {
 
         StoreLocatorPage page = new StoreLocatorPage(driver);
 
