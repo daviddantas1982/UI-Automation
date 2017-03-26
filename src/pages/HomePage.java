@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Created by manpreetsingh on 3/26/17.
+ * Class for Home Page.
  */
 public class HomePage {
 
@@ -45,6 +45,10 @@ public class HomePage {
   @FindBy(css = "#STP--Cart-NumberItems")
   private WebElement cart;
 
+  /***
+   * Constructor for Home Page class
+   * @param driver
+   */
   public HomePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);

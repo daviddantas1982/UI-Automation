@@ -11,10 +11,14 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by manpreetsingh on 3/26/17.
+ * Common class.
  */
 public class Common {
 
+  /***
+   * Method to get driver
+   * @return WebDriver
+   */
   public WebDriver getDriver(){
 
     WebDriver driver = new SafariDriver();

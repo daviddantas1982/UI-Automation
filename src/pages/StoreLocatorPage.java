@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 /**
- * Created by manpreetsingh on 3/26/17.
+ * Class for Store Locator Page.
  */
 public class StoreLocatorPage {
 
@@ -17,6 +19,13 @@ public class StoreLocatorPage {
   @FindBy(xpath = "addressInput")
   private WebElement zipCode;
 
+  @FindBy(xpath = "//*[@id=\"1216\"]/div[3]/div")
+  private List<WebElement> storeAddress;
+
+  /***
+   * Constructor for Store Locator Class
+   * @param driver
+   */
   public StoreLocatorPage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
