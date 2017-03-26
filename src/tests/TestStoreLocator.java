@@ -1,4 +1,4 @@
-package tests;
+
 
 import common.Common;
 import org.junit.After;
