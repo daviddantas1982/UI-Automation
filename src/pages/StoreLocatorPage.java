@@ -16,10 +16,18 @@ public class StoreLocatorPage {
 
   final String pageurl = "http://storelocator.staples.com/";
 
-  @FindBy(xpath = "addressInput")
+  public List<WebElement> getStoreAddress() {
+    return storeAddress;
+  }
+
+  public void setStoreAddress(List<WebElement> storeAddress) {
+    this.storeAddress = storeAddress;
+  }
+
+  @FindBy(id = "addressInput")
   private WebElement zipCode;
 
-  @FindBy(xpath = "//*[@id=\"1216\"]/div[3]/div")
+  @FindBy(xpath = "//*[@id=\"1216\"]/div[3]/div/span")
   private List<WebElement> storeAddress;
 
   /***

@@ -2,6 +2,7 @@ package common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -21,9 +22,11 @@ public class Common {
    */
   public WebDriver getDriver(){
 
-    WebDriver driver = new SafariDriver();
+    System.setProperty("webdriver.gecko.driver","C:\\geckodriver-v0.15.0-win64\\geckodriver.exe");
 
-    driver.manage().window().maximize();
+    //creates new instance of browser
+    WebDriver driver = new FirefoxDriver();
+
 
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

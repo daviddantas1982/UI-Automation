@@ -33,7 +33,7 @@ public class TestShopByCategory {
     @Test
     public void verifyShopByCategoryText() {
 
-        final String shopByCategory = "Shop By Category";
+        final String shopByCategory = "SHOP BY CATEGORY";
 
         HomePage page = new HomePage(driver);
 
