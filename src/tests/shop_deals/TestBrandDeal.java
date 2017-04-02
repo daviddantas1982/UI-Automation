@@ -1,4 +1,4 @@
-package pages;
+package shop_deals;
 
 import common.Common;
 import org.junit.After;
@@ -6,13 +6,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-
-import static org.junit.Assert.*;
+import pages.shop_deal.DailyDealPage;
 
 /**
  * Created by ddantas on 4/1/2017.
  */
-public class ShopDealPageTest {
+public class TestBrandDeal {
     protected WebDriver driver;
     @Before
     public void setUp() throws Exception {
@@ -29,10 +28,9 @@ public class ShopDealPageTest {
 
         final boolean checked = false;
 
-        ShopDealPage page = new ShopDealPage(driver);
+        DailyDealPage page = new DailyDealPage(driver);
 
-        Assert.assertEquals(page.getClickSearchDeal().getText(), checkDailyDeals);
-
+        Assert.assertEquals(page.getDailyDealHeading().getText(), checkDailyDeals);
 
     }
 

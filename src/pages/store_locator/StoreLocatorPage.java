@@ -1,4 +1,4 @@
-package pages;
+package pages.store_locator;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

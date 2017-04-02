@@ -1,4 +1,4 @@
-package pages;
+package pages.shop_deal;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,13 +6,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Created by ddantas on 4/1/2017.
+ * Page Class for Shop Deal.
  */
-public class ShopDealPage {
+public class BrandDealPage {
 
     WebDriver driver;
 
-    final String pageUrl = "http://www.staples.com/";
+    final String pageUrl = "http://www.staples.com/deals/Staples-Daily-Deals/BI1142421?l1=1&supercategory=&bopis=false&page=2&icid=HP:HPDEALSDROP:DAILYDEALS:2016";
+
+    @FindBy(xpath = ".//*[@id='homepage']/nav/ul/li[3]/div[1]")
+    private WebElement clickSearchDeal;
+
+    @FindBy(xpath = ".//*[@id='homepage']/nav/ul/li[3]/div[2]/div/ul/li[1]/a")
+    private WebElement clickDailyDealsAndMore;
+
+    // region Getter Setters
 
     public WebElement getClickSearchDeal() {
         return clickSearchDeal;
@@ -22,9 +30,6 @@ public class ShopDealPage {
         this.clickSearchDeal = clickSearchDeal;
     }
 
-    @FindBy(xpath = ".//*[@id='homepage']/nav/ul/li[3]/div[1]")
-    private  WebElement clickSearchDeal;
-
     public WebElement getClickDailyDealsAndMore() {
         return clickDailyDealsAndMore;
     }
@@ -33,18 +38,15 @@ public class ShopDealPage {
         this.clickDailyDealsAndMore = clickDailyDealsAndMore;
     }
 
-    @FindBy(xpath= ".//*[@id='homepage']/nav/ul/li[3]/div[2]/div/ul/li[1]/a")
-    private WebElement clickDailyDealsAndMore;
+    // endregion Getter Setters
 
-    public ShopDealPage( WebDriver driver)
-    {
-       this.driver = driver;
+    /***
+     * Constructor
+     * @param driver
+     */
+    public BrandDealPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
         driver.get(pageUrl);
     }
-
-
-
-
-
 }

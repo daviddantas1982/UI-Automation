@@ -1,21 +1,17 @@
-
+package store_locator;
 
 import common.Common;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import pages.HomePage;
-import pages.StoreLocatorPage;
+import pages.store_locator.StoreLocatorPage;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by ddantas on 3/12/2017.

@@ -1,4 +1,4 @@
-package pages;
+package pages.home;
 
 import common.Common;
 import org.openqa.selenium.WebDriver;
