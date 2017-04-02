@@ -1,18 +1,19 @@
+package shop_by_category;
 
 import common.Common;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import pages.HomePage;
+import org.openqa.selenium.*;
+import pages.home.HomePage;
 
 import java.io.IOException;
 
 /**
  * Created by ddantas on 3/12/2017.
  */
-public class TestShopServices {
+public class TestShopByCategory {
 
     protected WebDriver driver;
 
@@ -26,13 +27,13 @@ public class TestShopServices {
     }
 
     @Test
-    public void verifyShopServicesText() {
+    public void verifyShopByCategoryText() {
 
-        final String shopServices = "Shop Services";
+        final String shopByCategory = "SHOP BY CATEGORY";
 
         HomePage page = new HomePage(driver);
 
-        Assert.assertEquals(page.getShopServices().getText(), shopServices);
+        Assert.assertEquals(page.getSearchItem().getText(), shopByCategory);
     }
 
     @After

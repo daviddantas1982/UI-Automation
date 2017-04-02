@@ -214,3 +214,11 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.xml
+*.xml
+.idea/kotlinc.xml
+*.xml
+*.iml
+*.class
+.idea/kotlinc.xml
+*.xml___jb_tmp___

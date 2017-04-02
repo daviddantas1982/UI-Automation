@@ -1,23 +1,19 @@
+package shop_services;
 
 import common.Common;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.*;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.Command;
-import org.openqa.selenium.support.PageFactory;
-import pages.HomePage;
+import org.openqa.selenium.WebDriver;
+import pages.home.HomePage;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by ddantas on 3/12/2017.
  */
-public class TestShopByCategory {
+public class TestShopServices {
 
     protected WebDriver driver;
 
@@ -31,13 +27,13 @@ public class TestShopByCategory {
     }
 
     @Test
-    public void verifyShopByCategoryText() {
+    public void verifyShopServicesText() {
 
-        final String shopByCategory = "Shop By Category";
+        final String shopServices = "Shop Services";
 
         HomePage page = new HomePage(driver);
 
-        Assert.assertEquals(page.getSearchItem().getText(), shopByCategory);
+        Assert.assertEquals(page.getShopServices().getText(), shopServices);
     }
 
     @After

@@ -1,4 +1,4 @@
-package pages;
+package pages.store_locator;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,10 +16,18 @@ public class StoreLocatorPage {
 
   final String pageurl = "http://storelocator.staples.com/";
 
-  @FindBy(xpath = "addressInput")
+  public List<WebElement> getStoreAddress() {
+    return storeAddress;
+  }
+
+  public void setStoreAddress(List<WebElement> storeAddress) {
+    this.storeAddress = storeAddress;
+  }
+
+  @FindBy(id = "addressInput")
   private WebElement zipCode;
 
-  @FindBy(xpath = "//*[@id=\"1216\"]/div[3]/div")
+  @FindBy(xpath = "//*[@id=\"1216\"]/div[3]/div/span")
   private List<WebElement> storeAddress;
 
   /***

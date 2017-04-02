@@ -1,4 +1,4 @@
-package pages;
+package pages.home;
 
 import common.Common;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +33,7 @@ public class HomePage {
   @FindBy(xpath = "//*[@id=\"homepage\"]/nav/ul/li[5]/a")
   private WebElement logo;
 
-  @FindBy(css = ".locator-nav-itemdiv > span:nth-child(2)")
+  @FindBy(xpath = ".//*[@id='homepage']/div[2]/div/ul[2]/li[1]/a")
   private WebElement yourStore;
 
   @FindBy(css = "li.nav-item:nth-child(7) > div:nth-child(1) > span:nth-child(2)")

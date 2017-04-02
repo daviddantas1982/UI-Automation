@@ -1,4 +1,4 @@
-
+package home;
 
 import common.Common;
 import org.junit.After;
@@ -6,15 +6,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import pages.HomePage;
-import pages.StoreLocatorPage;
+import pages.home.HomePage;
 
 import java.io.IOException;
 
 /**
  * Created by ddantas on 3/12/2017.
  */
-public class TestStoreLocator {
+public class TestHome {
 
     protected WebDriver driver;
 
@@ -28,20 +27,13 @@ public class TestStoreLocator {
     }
 
     @Test
-    public void verifyStoreLocatorAddress() {
+    public void verifyShopServicesText() {
 
-        StoreLocatorPage page = new StoreLocatorPage(driver);
+        final String shopServices = "Shop Services";
 
-        // Enter Zip Code - 01532
+        HomePage page = new HomePage(driver);
 
-        // Verify following Store gets displayed
-        // #18 Lyman St
-        // Westborough, MA 01581
-        // 508.870.8761
-        // Store #1216
-
-        // Assert Full Address using following code example
-        // Assert.assertEquals(page.getZipCode().getText(), "");
+        Assert.assertEquals(page.getShopServices().getText(), shopServices);
     }
 
     @After
