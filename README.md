@@ -1,6 +1,6 @@
 # UI-Automation Tests for [Staples](http://www.staples.com/) website
 
-Following are the Test Cases written in C# using Slenium Webdriver
+Following are the Test Cases written in java using Slenium Webdriver
 
 1. Add item to cart
   - Login as guest
