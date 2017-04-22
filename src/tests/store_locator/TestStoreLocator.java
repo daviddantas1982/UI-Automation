@@ -93,6 +93,6 @@ public class TestStoreLocator {
 
     @After
     public void teardown() throws IOException {
-        //driver.quit();
+        driver.quit();
     }
 }

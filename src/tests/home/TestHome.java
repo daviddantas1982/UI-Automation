@@ -31,9 +31,10 @@ public class TestHome {
 
         final String shopServices = "Shop Services";
 
+
         HomePage page = new HomePage(driver);
 
-        Assert.assertEquals(page.getShopServices().getText(), shopServices);
+        Assert.assertEquals (page.getShopServices().getText(), shopServices);
     }
 
     @After
